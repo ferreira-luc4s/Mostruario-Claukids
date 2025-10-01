@@ -260,3 +260,59 @@ footer .redes a:hover {
     width: 100%;
   }
 }
+
+/* Fundo diferenciado para o mostruário */
+.mostruario-body {
+  background: #fffdfd url("imagens/fundo-infantil.png") repeat;
+  background-size: 200px;
+}
+
+/* Header exclusivo */
+.mostruario-header {
+  background: linear-gradient(135deg, #ff9ec4, #ffd6e8);
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+.mostruario-header h1 span {
+  color: #fff;
+}
+.mostruario-header .texto-header p {
+  color: #fefefe;
+}
+
+/* Grid de produtos */
+.mostruario-grid {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.produto-m {
+  background: linear-gradient(135deg, #ffd6f6, #c6f7ff, #fff7b2);;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+.produto-m:hover {
+  transform: scale(1.05);
+}
+.produto-m img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+}
+.produto-m h3 {
+  color: #ff3f7a;
+  font-size: 18px;
+  margin: 12px 0 6px;
+}
+.produto-m p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+

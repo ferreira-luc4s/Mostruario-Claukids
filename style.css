@@ -151,12 +151,12 @@ header {
 
 /* ===== CONTATO ===== */
 .contato {
-  max-width: 900px;
+  max-width: 500px;
   margin: 3rem auto;
   padding: 2rem;
   background: white; 
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   text-align: center;
 }
 

@@ -112,7 +112,7 @@ header {
 /* ===== PRODUTOS ===== */
 .mostruario-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(165px, 165px));
   gap: 2rem;
   padding: 1rem 2rem;
 }
@@ -127,10 +127,9 @@ header {
 }
 
 .produto-m img {
-  max-width: 180px;
-  height: auto;
+  max-width: 130px;
   border-radius: 15px;
-  margin-bottom: 1rem;
+
 }
 
 .produto-m h3 {

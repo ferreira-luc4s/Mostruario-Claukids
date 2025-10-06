@@ -112,35 +112,35 @@ header {
 /* ===== PRODUTOS ===== */
 .mostruario-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
   padding: 1rem 2rem;
 }
 
 .produto-m {
   background: #fff;
   border-radius: 18px;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
   transition: 0.4s;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .produto-m img {
-  max-width: 180px;
+  max-width: 150px;
   height: auto;
   border-radius: 15px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .produto-m h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #ff4081;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .produto-m p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #555;
 }
 
@@ -217,16 +217,6 @@ header {
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* ===== INFORMAÇÕES DE CONTATO ===== */
-.contato-info {
-  margin-top: 2rem;
-  font-size: 1rem;
-  color: #555;
-}
-.contato-info p {
-  margin-bottom: 0.5rem;
-}
-
 /* ===== FOOTER ===== */
 footer {
   background: #ff69b4;
@@ -250,18 +240,71 @@ footer .redes a:hover {
 }
 
 /* ===== RESPONSIVO ===== */
+
+/* Celulares pequenos (2 produtos por linha) */
+@media (max-width: 480px) {
+  .mostruario-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
+
+  .produto-m {
+    padding: 0.6rem;
+  }
+
+  .produto-m img {
+    max-width: 100px;
+  }
+
+  .texto-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .menu-links {
+    flex-direction: column;
+  }
+
+  .categoria {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
+  .mostruario-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
   .topo {
     flex-direction: column;
     text-align: center;
   }
-  .form-contato input,
-  .form-contato textarea {
-    width: 100%;
+
+  .produto-m img {
+    max-width: 120px;
   }
 }
 
-/* Fundo diferenciado para o mostruário */
+/* Desktop grande: mais produtos visíveis */
+@media (min-width: 1200px) {
+  .mostruario-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+  }
+
+  .produto-m img {
+    max-width: 160px;
+  }
+
+  body {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
+
+/* Fundo diferenciado */
 .mostruario-body {
   background: #fffdfd url("imagens/fundo-infantil.png") repeat;
   background-size: 200px;
@@ -280,5 +323,3 @@ footer .redes a:hover {
 .mostruario-header .texto-header p {
   color: #555;
 }
-
-

@@ -127,10 +127,11 @@ header {
 }
 
 .produto-m img {
-  max-width: 150px;
+  max-width: 100%; /* Para que a imagem ocupe o máximo possível do espaço disponível */
   height: auto;
   border-radius: 15px;
-  margin-bottom: 0.8rem;
+  margin: 0; /* Remover qualquer margem */
+  padding: 0; /* Remover qualquer padding se houver */
 }
 
 .produto-m h3 {
@@ -253,9 +254,14 @@ footer .redes a:hover {
     padding: 0.6rem;
   }
 
-  .produto-m img {
-    max-width: 100px;
-  }
+.produto-m img {
+  max-width: 100%; /* Para que a imagem ocupe o máximo possível do espaço disponível */
+  height: auto;
+  border-radius: 15px;
+  margin: 0; /* Remover qualquer margem */
+  padding: 0; /* Remover qualquer padding se houver */
+}
+
 
   .texto-header h1 {
     font-size: 1.4rem;
@@ -282,9 +288,14 @@ footer .redes a:hover {
     text-align: center;
   }
 
-  .produto-m img {
-    max-width: 120px;
-  }
+.produto-m img {
+  max-width: 100%; /* Para que a imagem ocupe o máximo possível do espaço disponível */
+  height: auto;
+  border-radius: 15px;
+  margin: 0; /* Remover qualquer margem */
+  padding: 0; /* Remover qualquer padding se houver */
+}
+
 }
 
 /* Desktop grande: mais produtos visíveis */
@@ -294,9 +305,14 @@ footer .redes a:hover {
     gap: 2rem;
   }
 
-  .produto-m img {
-    max-width: 160px;
-  }
+.produto-m img {
+  max-width: 100%; /* Para que a imagem ocupe o máximo possível do espaço disponível */
+  height: auto;
+  border-radius: 15px;
+  margin: 0; /* Remover qualquer margem */
+  padding: 0; /* Remover qualquer padding se houver */
+}
+
 
   body {
     max-width: 1500px;

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mostruário - Clau Kids</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mostruário Clau Kids</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Usar defer para garantir que script.js será executado após o parsing do HTML -->
+  <script defer src="script.js"></script>
 </head>
-<body class="mostruario-body">
-
-  <!-- ===== HEADER ===== -->
+<body>
   <header class="mostruario-header">
     <div class="topo">
-      <img src="imagens/logo.jpg" alt="Logo Clau Kids" class="logo">
+      <img src="imagens/logo.jpg" alt="Logo Clau Kids" class="logo" />
       <div class="texto-header">
         <h1>Mostruário <span>Clau Kids</span></h1>
         <p>Apresentação de produtos para parceiros 🌟</p>
       </div>
-      <button class="btn-nav" onclick="window.location.href='contato.html'"> Entrar em contato</button>
+      <button class="btn-nav" onclick="window.location.href='contato.html'">Entrar em contato</button>
     </div>
     <nav class="menu">
       <ul class="menu-links">
@@ -26,205 +26,28 @@
     </nav>
   </header>
 
-  <!-- ===== SEÇÃO DE PRODUTOS ===== -->
   <main>
-    <!-- VERÃO -->
     <section class="categoria-section">
-      <h2 class="categoria faixa-verao">Coleção Verão 🌞</h2>
-      <div class="mostruario-grid">
-        <div class="produto-m">
-          <img src="imagens/p1.png" alt="Cropped Cinza com Manga">
-          <h3>Cropped Cinza com Manga</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p2.png" alt="Cropped Cinza Manga Vazada">
-          <h3>Cropped Cinza Manga Vazada</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p3.png" alt="Vestido Verde">
-          <h3>Vestido Verde</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p4.png" alt="Shorts Vermelho com Brilho">
-          <h3>Shorts Vermelho com Brilho</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p5.png" alt="Macaquinho Amarelo">
-          <h3>Macaquinho Amarelo</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p6.png" alt="Cropped Rosa com Brilho">
-          <h3>Cropped Rosa com Brilho</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p7.png" alt="Camisa com Costas Vazada">
-          <h3>Camisa com Costas Vazada</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p8.png" alt="Vestido Preto longo">
-          <h3>Vestido Preto longo</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p9.png" alt="Cropped Cinza Babado">
-          <h3>Cropped Cinza Babado</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p10.png" alt="Macaquinho Vermelho">
-          <h3>Macaquinho Vermelho</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p11.png" alt="Cropped Preto uma Manga">
-          <h3>Cropped Preto uma Manga</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p12.png" alt="Cropped Amarelo com Amarração">
-          <h3>Cropped Amarelo com Amarração</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p13.png" alt="Macaquinho Verde">
-          <h3>Macaquinho Verde</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p14.png" alt="Saia Prata">
-          <h3>Saia Prata</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p15.png" alt="Vestido bege">
-          <h3>Vestido bege</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p16.png" alt="Vestido Azul">
-          <h3>Vestido Azul</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p17.png" alt="Cropped Branco com Camisa Aberta">
-          <h3>Cropped Branco com Camisa Aberta</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p18.png" alt="Cropped Vermelho com Bolso">
-          <h3>Cropped Vermelho com Bolso</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p19.png" alt="Cropped Cinza com Tule">
-          <h3>Cropped Cinza com Tule</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p20.png" alt="Cropped Preto com Detalhe na Frente">
-          <h3>Cropped Preto com Detalhe na Frente</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p21.png" alt="Cropped Branco com Brilho">
-          <h3>Cropped Branco com Brilho</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p22.png" alt="Vestido Preto Detalhe no Ombro">
-          <h3>Vestido Preto Detalhe no Ombro</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p23.png" alt="Vestido Azul com Tule">
-          <h3>Vestido Azul com Tule</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p24.png" alt="Cropped rosa">
-          <h3>Cropped rosa</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p25.jpg" alt="Cropped Amarelo Bla">
-          <h3>Cropped Amarelo Bla</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p26.jpg" alt="Vestido Preto com Alça">
-          <h3>Vestido Preto com Alça</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p27.jpg" alt="Cropped Amarelo">
-          <h3>Cropped Amarelo</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p28.jpg" alt="Saia Preta Rendada">
-          <h3>Saia Preta Rendada</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p29.jpg" alt="Saia Preta">
-          <h3>Saia Preta</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-                <div class="produto-m">
-          <img src="imagens/p30.png" alt="Calça Preta">
-          <h3>Calça Preta</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p31.png" alt="Shorts Amarelo">
-          <h3>Shorts Amarelo</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/p32.png" alt="Cropped Laço Brilhante">
-          <h3>Cropped Laço Brilhante</h3>
-          <p>Estilo alegre para o dia a dia.</p>
-        </div>
-      </div>
+      <h2 class="categoria faixa-verao">Coleção Verão Kids 🌞</h2>
+      <div class="mostruario-grid" id="produtos-kids"></div>
     </section>
 
-    <!-- INVERNO 
     <section class="categoria-section">
-      <h2 class="categoria faixa-inverno">Coleção Inverno ❄️</h2>
-      <div class="mostruario-grid">
-        <div class="produto-m">
-          <img src="imagens/produto1.png" alt="Camiseta Estampada">
-          <h3>Camiseta Divertida</h3>
-          <p>Com estampas criativas que encantam.</p>
-        </div>
-        <div class="produto-m">
-          <img src="imagens/produto2.png" alt="Macacão Jeans">
-          <h3>Macacão Jeans</h3>
-          <p>Conforto e estilo em uma peça clássica.</p>
-        </div>
-      </div>
+      <h2 class="categoria faixa-verao">Coleção Verão Adulto 🌴</h2>
+      <div class="mostruario-grid" id="produtos-adulto"></div>
     </section>
-  </main> -->
+  </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="rodape-conteudo">
       <p>&copy; 2025 Clau Kids. Todos os direitos reservados.</p>
       <p>Siga-nos nas redes sociais:</p>
       <div class="redes">
-        <a href="https://www.instagram.com/claukids0929/">Instagram</a> | 
+        <a href="https://www.instagram.com/claukids0929/" target="_blank">Instagram</a> | 
         <a href="#">Facebook</a> | 
         <a href="#">TikTok</a>
       </div>
     </div>
   </footer>
-
 </body>
 </html>

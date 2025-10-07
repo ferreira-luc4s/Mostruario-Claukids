@@ -1,38 +1,48 @@
-// script.js — carrega os produtos do JSON e exibe no mostruário
+let produtosCarregados = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   carregarProdutos();
+
+  // Seleciona o filtro de categoria
+  const seletor = document.getElementById("seletor-categoria");
+  seletor.addEventListener("change", () => {
+    const filtroSelecionado = seletor.value;
+    mostrarProdutos(produtosCarregados, filtroSelecionado);
+  });
 });
 
 async function carregarProdutos() {
   try {
     const response = await fetch("produtos.json");
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error(`Erro ao carregar JSON: ${response.status}`);
     }
     const produtos = await response.json();
-    mostrarProdutos(produtos);
+    produtosCarregados = produtos;
+    mostrarProdutos(produtos, "todos");
   } catch (erro) {
     console.error("Erro ao carregar produtos:", erro);
-    const container = document.getElementById("produtos");
-    if (container) {
-      container.innerHTML = `<p style="color: red;">Erro ao carregar produtos.</p>`;
-    }
+    document.getElementById("produtos-kids").innerHTML = `<p style="color:red">Erro ao carregar produtos.</p>`;
+    document.getElementById("produtos-adulto").innerHTML = `<p style="color:red">Erro ao carregar produtos.</p>`;
   }
 }
 
-function mostrarProdutos(produtos) {
+function mostrarProdutos(produtos, filtro = "todos") {
   const kidsContainer = document.getElementById("produtos-kids");
   const adultoContainer = document.getElementById("produtos-adulto");
-
-  if (!kidsContainer || !adultoContainer) return;
+  const secaoKids = document.getElementById("secao-kids");
+  const secaoAdulto = document.getElementById("secao-adulto");
 
   kidsContainer.innerHTML = "";
   adultoContainer.innerHTML = "";
 
-  produtos.forEach(produto => {
-    if (!produto.nome || !produto.imagem || !produto.categoria) return;
+  const produtosFiltrados = produtos.filter(produto => {
+    if (filtro === "todos") return true;
+    return produto.categoria === filtro;
+  });
 
+  // Preenche os containers
+  produtosFiltrados.forEach(produto => {
     const div = document.createElement("div");
     div.className = "produto";
     div.innerHTML = `
@@ -46,10 +56,21 @@ function mostrarProdutos(produtos) {
       adultoContainer.appendChild(div);
     }
   });
+
+  // Mostra/oculta seções com base no filtro
+  if (filtro === "kids") {
+    secaoKids.style.display = "block";
+    secaoAdulto.style.display = "none";
+  } else if (filtro === "adulto") {
+    secaoKids.style.display = "none";
+    secaoAdulto.style.display = "block";
+  } else {
+    secaoKids.style.display = "block";
+    secaoAdulto.style.display = "block";
+  }
 }
 
-
-// Função para abrir o modal
+// Modal
 function abrirModal(imagem, nome) {
   const modal = document.createElement("div");
   modal.className = "modal";
@@ -63,11 +84,7 @@ function abrirModal(imagem, nome) {
   document.body.appendChild(modal);
 }
 
-// Função para fechar o modal
 function fecharModal() {
   const modal = document.querySelector(".modal");
-  if (modal) {
-    modal.remove();
-  }
+  if (modal) modal.remove();
 }
-

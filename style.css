@@ -271,4 +271,43 @@ footer {
   cursor: pointer;
 }
 
+.filtros-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.filtros-section label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: #ff3f7a;
+}
+
+#seletor-categoria {
+  padding: 0.6rem 1.5rem;
+  border-radius: 20px;
+  border: 2px solid #ff69b4; /* Rosa suave */
+  background-color: white;
+  color: #ff3f7a;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: none; /* Remove aparência padrão */
+  -webkit-appearance: none; /* Para navegadores WebKit (Chrome, Safari) */
+  -moz-appearance: none; /* Para Firefox */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23ff69b4' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#seletor-categoria:focus {
+  border-color: #ff3f7a;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.3); /* Efeito de foco */
+  outline: none;
+}
+
+
+
 

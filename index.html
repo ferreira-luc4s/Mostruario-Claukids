@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mostruário Clau Kids</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Usar defer para garantir que script.js será executado após o parsing do HTML -->
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -27,12 +26,22 @@
   </header>
 
   <main>
-    <section class="categoria-section">
+    <!-- SELETOR DE FILTRO -->
+    <section class="filtros-section">
+      <label for="seletor-categoria">Filtrar por categoria:</label>
+      <select id="seletor-categoria">
+        <option value="todos">Todos</option>
+        <option value="kids">Kids</option>
+        <option value="adulto">Adulto</option>
+      </select>
+    </section>
+
+    <section class="categoria-section" id="secao-kids">
       <h2 class="categoria faixa-verao">Coleção Verão Kids 🌞</h2>
       <div class="mostruario-grid" id="produtos-kids"></div>
     </section>
 
-    <section class="categoria-section">
+    <section class="categoria-section" id="secao-adulto">
       <h2 class="categoria faixa-verao">Coleção Verão Adulto 🌴</h2>
       <div class="mostruario-grid" id="produtos-adulto"></div>
     </section>
